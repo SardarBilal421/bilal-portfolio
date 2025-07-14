@@ -100,7 +100,7 @@ const portfolioData = {
     category: "Web Application",
     client: "Academic Project",
     projectDate: "2023",
-    projectUrl: "https://github.com/blockchain-stamp-system",
+    projectUrl: "https://github.com/SardarBilal421/Stamp-Automation-System",
     description:
       "A blockchain-based system for automating stamp collection and management. This innovative solution leverages blockchain technology to ensure transparency, security, and immutability in stamp authentication and trading processes.",
     features: [
@@ -140,7 +140,7 @@ const portfolioData = {
     category: "Mobile App",
     client: "The United Family App",
     projectDate: "2021 - 2022",
-    projectUrl: "https://unitedfamily.app",
+    projectUrl: "https://unitedfamily.app/en/",
     description:
       "UnitedApp is a family task management application designed to improve family engagement and responsibility in children. The app features a reward-based responsibility system that encourages children to complete tasks and earn rewards while maintaining family harmony.",
     features: [
@@ -187,7 +187,7 @@ const portfolioData = {
     category: "Web Application",
     client: "Healthcare Provider",
     projectDate: "2023",
-    projectUrl: "https://omigahealth.com",
+    projectUrl: "https://omigahealth.com/",
     description:
       "Omiga Health is a comprehensive health monitoring application that provides real-time data analysis and personalized health recommendations. The platform helps users track their health metrics and receive AI-powered insights for better health management.",
     features: [
@@ -277,7 +277,7 @@ const portfolioData = {
     category: "Web Application",
     client: "Logistics Company",
     projectDate: "2023",
-    projectUrl: "https://livetracking.com",
+    projectUrl: "https://github.com/SardarBilal421/LiveTrackingDevice",
     description:
       "A comprehensive live tracking system for vehicles and assets that provides real-time location monitoring, route optimization, and fleet management capabilities. The system helps businesses improve operational efficiency and reduce costs.",
     features: [
@@ -318,7 +318,7 @@ const portfolioData = {
     category: "Web Application",
     client: "Personal Development",
     projectDate: "2024",
-    projectUrl: "https://ai-coach.app",
+    projectUrl: "https://github.com/SardarBilal421/stream-chat-app",
     description:
       "A personalized AI coach application that provides individuals with customized guidance and support for personal development, goal setting, and habit formation. The platform uses advanced AI to create personalized coaching experiences.",
     features: [
