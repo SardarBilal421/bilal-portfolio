@@ -100,7 +100,7 @@ const portfolioData = {
     category: "Web Application",
     client: "Academic Project",
     projectDate: "2023",
-    projectUrl: "https://github.com/SardarBilal421/Stamp-Automation-System",
+    projectUrl: "https://github.com/SardarBilal421/FYP-Project",
     description:
       "A blockchain-based system for automating stamp collection and management. This innovative solution leverages blockchain technology to ensure transparency, security, and immutability in stamp authentication and trading processes.",
     features: [
