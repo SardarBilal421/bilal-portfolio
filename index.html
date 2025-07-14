@@ -892,40 +892,141 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Get In Touch</h3>
+              <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+              <div class="contact-options">
+                <div class="contact-option">
+                  <i class="bi bi-envelope-fill"></i>
+                  <div>
+                    <h4>Email Me Directly</h4>
+                    <p>Click the button below to send me an email through Gmail</p>
+                    <a href="mailto:sardar142bilal@gmail.com?subject=Portfolio Inquiry" class="btn btn-primary">
+                      <i class="bi bi-envelope"></i> Send Me Email
+                    </a>
+                  </div>
                 </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                <div class="contact-option">
+                  <i class="bi bi-telephone-fill"></i>
+                  <div>
+                    <h4>Call Me</h4>
+                    <p>Feel free to call me directly</p>
+                    <a href="tel:+447438139239" class="btn btn-outline-primary">
+                      <i class="bi bi-telephone"></i> +44 7438 139239
+                    </a>
+                  </div>
                 </div>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                <div class="contact-option">
+                  <i class="bi bi-linkedin"></i>
+                  <div>
+                    <h4>Connect on LinkedIn</h4>
+                    <p>Let's connect professionally</p>
+                    <a href="https://www.linkedin.com/in/bilal142/" target="_blank" class="btn btn-outline-primary">
+                      <i class="bi bi-linkedin"></i> Connect on LinkedIn
+                    </a>
+                  </div>
                 </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
               </div>
-            </form>
+            </div>
+
+            <style>
+              .contact-info h3 {
+                color: #173b6c;
+                margin-bottom: 20px;
+              }
+
+              .contact-info p {
+                color: #6c757d;
+                margin-bottom: 30px;
+                font-size: 1.1em;
+              }
+
+              .contact-options {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+              }
+
+              .contact-option {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                padding: 8px;
+                background: #f8f9fa;
+                border-radius: 8px;
+                border-left: 3px solid #173b6c;
+              }
+
+              .contact-option i {
+                font-size: 1.5em;
+                color: #173b6c;
+                margin-top: 3px;
+              }
+
+              .contact-option h4 {
+                color: #173b6c;
+                margin-bottom: 6px;
+                font-size: 1.1em;
+              }
+
+              .contact-option p {
+                color: #6c757d;
+                margin-bottom: 10px;
+                font-size: 0.9em;
+              }
+
+              .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                padding: 8px 16px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.9em;
+                transition: all 0.3s ease;
+              }
+
+              .btn-primary {
+                background: #173b6c;
+                color: white;
+                border: 2px solid #173b6c;
+              }
+
+              .btn-primary:hover {
+                background: #0d2b4a;
+                border-color: #0d2b4a;
+                color: white;
+                transform: translateY(-1px);
+              }
+
+              .btn-outline-primary {
+                background: transparent;
+                color: #173b6c;
+                border: 2px solid #173b6c;
+              }
+
+              .btn-outline-primary:hover {
+                background: #173b6c;
+                color: white;
+                transform: translateY(-1px);
+              }
+
+              @media (max-width: 768px) {
+                .contact-option {
+                  flex-direction: column;
+                  text-align: center;
+                }
+
+                .contact-option i {
+                  margin-top: 0;
+                  margin-bottom: 8px;
+                }
+              }
+            </style>
           </div><!-- End Contact Form -->
 
         </div>
