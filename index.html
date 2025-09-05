@@ -70,29 +70,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Desktop-specific optimizations -->
-  <style>
-    /* Desktop-only performance improvements */
-    @media (min-width: 768px) {
-
-      /* Optimize desktop font rendering */
-      body {
-        font-display: swap;
-        text-rendering: optimizeSpeed;
-      }
-
-      /* Desktop image optimization */
-      img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-      }
-
-      /* Desktop layout optimization */
-      .container {
-        contain: layout style;
-      }
-    }
-  </style>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -1256,25 +1235,6 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Desktop-specific JavaScript optimizations -->
-  <script>
-    // Desktop-only performance optimizations
-    if (window.innerWidth >= 768) {
-      // Desktop: Load non-critical scripts after page load
-      window.addEventListener('load', function () {
-        // Desktop-specific optimizations
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(function () {
-            // Desktop: Preload next page resources
-            const link = document.createElement('link');
-            link.rel = 'prefetch';
-            link.href = 'blog/index.html';
-            document.head.appendChild(link);
-          });
-        }
-      });
-    }
-  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
