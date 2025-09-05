@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Complete Guide to React.js Development in 2024 | Bilal Rehman</title>
+    <meta
+        content="Learn React.js development from scratch with this comprehensive guide. Covers hooks, state management, performance optimization, and best practices for 2024."
+        name="description">
+    <meta
+        content="React.js Tutorial, React Hooks, React State Management, React Performance, JavaScript Framework, Frontend Development, React Best Practices"
+        name="keywords">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://www.googletagmanager.com" rel="preconnect">
+    <!-- Preload critical fonts -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Complete Guide to React.js Development in 2024",
+    "description": "Learn React.js development from scratch with this comprehensive guide. Covers hooks, state management, performance optimization, and best practices for 2024.",
+    "author": {
+      "@type": "Person",
+      "name": "Bilal Rehman",
+      "jobTitle": "Full Stack Developer",
+      "url": "https://bilalrehman.me"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Bilal Rehman"
+    },
+    "datePublished": "2024-12-19",
+    "dateModified": "2024-12-19",
+    "url": "https://bilalrehman.me/blog/react-js-development-guide.html",
+    "mainEntityOfPage": "https://bilalrehman.me/blog/react-js-development-guide.html",
+    "image": "https://bilalrehman.me/assets/img/portfolio/app-1.png",
+    "articleSection": "Web Development",
+    "keywords": ["React.js", "JavaScript", "Frontend Development", "Web Development", "React Hooks", "State Management"]
+  }
+  </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLZJSQ9806"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BLZJSQ9806');
+    </script>
+</head>
+
+<body class="blog-post-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="../assets/img/my-profile-img.jpg" alt="Bilal Rehman - Full Stack Developer"
+                class="img-fluid rounded-circle" loading="lazy">
+        </div>
+
+        <a href="../index.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Bilal Rehman</h1>
+        </a>
+
+        <div class="social-links text-center">
+            <a href="https://github.com/SardarBilal421" class="github"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/bilal142/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="../index.html"><i class="bi bi-house navicon"></i>Home</a></li>
+                <li><a href="../index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+                <li><a href="../index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+                <li><a href="../index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+                <li><a href="../index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+                <li><a href="index.html" class="active"><i class="bi bi-journal-text navicon"></i> Blog</a></li>
+                <li><a href="../index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container">
+                <h1>Complete Guide to React.js Development in 2024</h1>
+                <p>Master React.js with this comprehensive guide covering hooks, state management, and performance
+                    optimization</p>
+            </div>
+        </div>
+
+        <!-- Blog Post Content -->
+        <section id="blog-post" class="blog-post section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-8">
+
+                        <article class="blog-post-content">
+
+                            <!-- Blog Post Meta -->
+                            <div class="blog-post-meta mb-4">
+                                <span><i class="bi bi-calendar"></i> December 19, 2024</span>
+                                <span><i class="bi bi-person"></i> By Bilal Rehman</span>
+                                <span><i class="bi bi-tag"></i> React.js, JavaScript, Frontend</span>
+                            </div>
+
+                            <!-- Featured Image -->
+                            <div class="blog-post-featured-img mb-4">
+                                <img src="../assets/img/portfolio/app-1.png" alt="React.js Development Guide"
+                                    class="img-fluid" loading="lazy">
+                            </div>
+
+                            <!-- Blog Post Content -->
+                            <div class="blog-post-text">
+
+                                <h2>Introduction to React.js</h2>
+                                <p>React.js has revolutionized frontend development since its introduction by Facebook
+                                    in 2013. As a Full Stack Developer with 3+ years of experience, I've seen React.js
+                                    evolve from class components to functional components with hooks, making it more
+                                    powerful and developer-friendly.</p>
+
+                                <p>In this comprehensive guide, I'll share everything you need to know about React.js
+                                    development in 2024, including best practices, performance optimization techniques,
+                                    and real-world examples from my experience building applications like HomeLyne,
+                                    Pubkit, and UnitedApp.</p>
+
+                                <h2>What is React.js?</h2>
+                                <p>React.js is a JavaScript library for building user interfaces, particularly web
+                                    applications. It's component-based, which means you can create reusable UI
+                                    components that manage their own state and can be composed to build complex user
+                                    interfaces.</p>
+
+                                <h3>Key Features of React.js:</h3>
+                                <ul>
+                                    <li><strong>Component-Based Architecture:</strong> Build encapsulated components
+                                        that manage their own state</li>
+                                    <li><strong>Virtual DOM:</strong> Efficient updates and rendering through virtual
+                                        DOM diffing</li>
+                                    <li><strong>JSX:</strong> Syntax extension that allows you to write HTML-like code
+                                        in JavaScript</li>
+                                    <li><strong>Unidirectional Data Flow:</strong> Data flows down from parent to child
+                                        components</li>
+                                    <li><strong>Rich Ecosystem:</strong> Extensive library of third-party components and
+                                        tools</li>
+                                </ul>
+
+                                <h2>React Hooks: The Modern Approach</h2>
+                                <p>React Hooks, introduced in React 16.8, allow you to use state and other React
+                                    features in functional components. This has become the preferred way to write React
+                                    components in 2024.</p>
+
+                                <h3>Essential React Hooks:</h3>
+
+                                <h4>1. useState Hook</h4>
+                                <p>The useState hook allows you to add state to functional components:</p>
+                                <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Click me
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+                                <h4>2. useEffect Hook</h4>
+                                <p>The useEffect hook lets you perform side effects in functional components:</p>
+                                <pre><code>import React, { useState, useEffect } from 'react';
+
+function UserProfile({ userId }) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() =&gt; {
+    fetch(`/api/users/${userId}`)
+      .then(response =&gt; response.json())
+      .then(data =&gt; setUser(data));
+  }, [userId]);
+
+  return user ? &lt;div&gt;{user.name}&lt;/div&gt; : &lt;div&gt;Loading...&lt;/div&gt;;
+}</code></pre>
+
+                                <h2>State Management in React</h2>
+                                <p>Effective state management is crucial for building scalable React applications. Here
+                                    are the most popular approaches:</p>
+
+                                <h3>1. Local State with useState</h3>
+                                <p>For simple state that doesn't need to be shared across components, useState is
+                                    perfect.</p>
+
+                                <h3>2. Context API</h3>
+                                <p>For sharing state across multiple components without prop drilling:</p>
+                                <pre><code>import React, { createContext, useContext, useState } from 'react';
+
+const ThemeContext = createContext();
+
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState('light');
+
+  return (
+    &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
+      {children}
+    &lt;/ThemeContext.Provider&gt;
+  );
+}
+
+export function useTheme() {
+  return useContext(ThemeContext);
+}</code></pre>
+
+                                <h3>3. Redux Toolkit</h3>
+                                <p>For complex applications with extensive state management needs, Redux Toolkit
+                                    provides a more structured approach.</p>
+
+                                <h2>Performance Optimization Techniques</h2>
+                                <p>Performance is crucial for user experience. Here are key optimization techniques I
+                                    use in my projects:</p>
+
+                                <h3>1. React.memo</h3>
+                                <p>Prevent unnecessary re-renders by memoizing components:</p>
+                                <pre><code>import React, { memo } from 'react';
+
+const ExpensiveComponent = memo(({ data }) =&gt; {
+  return &lt;div&gt;{/* Expensive rendering logic */}&lt;/div&gt;;
+});</code></pre>
+
+                                <h3>2. useMemo and useCallback</h3>
+                                <p>Optimize expensive calculations and function references:</p>
+                                <pre><code>import React, { useMemo, useCallback } from 'react';
+
+function ProductList({ products, filter }) {
+  const filteredProducts = useMemo(() =&gt; {
+    return products.filter(product =&gt; product.category === filter);
+  }, [products, filter]);
+
+  const handleClick = useCallback((productId) =&gt; {
+    // Handle click logic
+  }, []);
+
+  return (
+    &lt;div&gt;
+      {filteredProducts.map(product =&gt; (
+        &lt;Product key={product.id} product={product} onClick={handleClick} /&gt;
+      ))}
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+                                <h2>Best Practices for React.js Development</h2>
+                                <p>Based on my experience building applications like HomeLyne and Pubkit, here are the
+                                    best practices I follow:</p>
+
+                                <h3>1. Component Structure</h3>
+                                <ul>
+                                    <li>Keep components small and focused on a single responsibility</li>
+                                    <li>Use descriptive component and prop names</li>
+                                    <li>Extract reusable logic into custom hooks</li>
+                                </ul>
+
+                                <h3>2. Code Organization</h3>
+                                <ul>
+                                    <li>Group related files in feature folders</li>
+                                    <li>Use index.js files for clean imports</li>
+                                    <li>Separate business logic from UI components</li>
+                                </ul>
+
+                                <h3>3. Error Handling</h3>
+                                <ul>
+                                    <li>Implement error boundaries for graceful error handling</li>
+                                    <li>Use try-catch blocks for async operations</li>
+                                    <li>Provide meaningful error messages to users</li>
+                                </ul>
+
+                                <h2>Real-World Example: Building a Task Management Component</h2>
+                                <p>Let me show you how I built the task management functionality for UnitedApp using
+                                    React.js:</p>
+
+                                <pre><code>import React, { useState, useEffect } from 'react';
+
+function TaskManager() {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState('');
+
+  useEffect(() =&gt; {
+    // Load tasks from Firebase
+    const unsubscribe = onSnapshot(collection(db, 'tasks'), (snapshot) =&gt; {
+      const taskList = snapshot.docs.map(doc =&gt; ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setTasks(taskList);
+    });
+
+    return () =&gt; unsubscribe();
+  }, []);
+
+  const addTask = async () =&gt; {
+    if (newTask.trim()) {
+      await addDoc(collection(db, 'tasks'), {
+        title: newTask,
+        completed: false,
+        createdAt: serverTimestamp()
+      });
+      setNewTask('');
+    }
+  };
+
+  return (
+    &lt;div className="task-manager"&gt;
+      &lt;h2&gt;Task Management&lt;/h2&gt;
+      &lt;div className="add-task"&gt;
+        &lt;input
+          type="text"
+          value={newTask}
+          onChange={(e) =&gt; setNewTask(e.target.value)}
+          placeholder="Add new task"
+        /&gt;
+        &lt;button onClick={addTask}&gt;Add Task&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div className="task-list"&gt;
+        {tasks.map(task =&gt; (
+          &lt;TaskItem key={task.id} task={task} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+                                <h2>Conclusion</h2>
+                                <p>React.js continues to be the leading choice for frontend development in 2024. With
+                                    its component-based architecture, powerful hooks system, and extensive ecosystem, it
+                                    provides everything you need to build modern web applications.</p>
+
+                                <p>As a Full Stack Developer, I've used React.js to build everything from simple
+                                    portfolio websites to complex applications like HomeLyne with AR integration. The
+                                    key to success is understanding the fundamentals, following best practices, and
+                                    continuously learning about new features and optimization techniques.</p>
+
+                                <p>If you're looking to hire a React.js developer or need help with your React.js
+                                    project, feel free to <a href="../index.html#contact">contact me</a>. I'd be happy
+                                    to discuss how I can help you build amazing React.js applications.</p>
+
+                            </div>
+
+                            <!-- Author Bio -->
+                            <div class="author-bio mt-5 p-4 bg-light rounded">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3">
+                                        <img src="../assets/img/my-profile-img.jpg" alt="Bilal Rehman"
+                                            class="img-fluid rounded-circle" loading="lazy">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h4>About Bilal Rehman</h4>
+                                        <p>Bilal Rehman is a Full Stack Developer with 3+ years of experience
+                                            specializing in React.js, Node.js, React Native, MongoDB, and Firebase.
+                                            Based in London, UK, he has built applications for clients worldwide,
+                                            including HomeLyne, Pubkit, and UnitedApp.</p>
+                                        <a href="../index.html#contact" class="btn btn-primary">Hire Bilal</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <aside class="sidebar">
+
+                            <!-- Related Posts -->
+                            <div class="sidebar-widget">
+                                <h3>Related Posts</h3>
+                                <div class="related-posts">
+                                    <div class="related-post">
+                                        <img src="../assets/img/portfolio/BChain.jpg" alt="Node.js Guide"
+                                            class="img-fluid" loading="lazy">
+                                        <div class="related-post-content">
+                                            <h4><a href="node-js-backend-development.html">Building Scalable Node.js
+                                                    Applications</a></h4>
+                                            <span class="post-date">Dec 18, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="related-post">
+                                        <img src="../assets/img/portfolio/v4h2o-main.png" alt="React Native Guide"
+                                            class="img-fluid" loading="lazy">
+                                        <div class="related-post-content">
+                                            <h4><a href="react-native-vs-flutter.html">React Native vs Flutter</a></h4>
+                                            <span class="post-date">Dec 17, 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact CTA -->
+                            <div class="sidebar-widget">
+                                <h3>Need React.js Development?</h3>
+                                <p>Looking for a skilled React.js developer for your project? I can help you build
+                                    amazing web applications.</p>
+                                <a href="../index.html#contact" class="btn btn-primary w-100">Get In Touch</a>
+                            </div>
+
+                        </aside>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Bilal</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
