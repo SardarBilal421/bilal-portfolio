@@ -17,6 +17,17 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+/* Font Display Optimization */
+@font-face {
+  font-family: 'Raleway';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+}
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */

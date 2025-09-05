@@ -46,13 +46,16 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Preload critical resources -->
-  <link rel="preload" href="assets/img/hero-bg.jpg" as="image">
-  <link rel="preload" href="assets/img/my-profile-img.jpg" as="image">
+  <link rel="preload" href="assets/img/hero-bg.jpg" as="image" media="(min-width: 768px)">
+  <link rel="preload" href="assets/img/my-profile-img.jpg" as="image" media="(min-width: 768px)">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://www.googletagmanager.com" rel="preconnect">
+  <!-- Resource Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <!-- Preload critical fonts -->
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@400;600&display=swap"
@@ -62,12 +65,56 @@
       rel="stylesheet">
   </noscript>
 
+  <!-- Critical CSS -->
+  <style>
+    /* Critical above-the-fold styles */
+    body {
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background: linear-gradient(45deg, rgba(5, 99, 187, 0.8), rgba(0, 0, 0, 0.8));
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h2 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0563bb;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -182,7 +229,7 @@
     <section id="hero" class="hero section dark-background">
 
       <img src="assets/img/hero-bg.jpg" alt="Bilal Rehman - Full Stack Developer Portfolio Background"
-        data-aos="fade-in" class="" loading="lazy">
+        data-aos="fade-in" class="" loading="lazy" decoding="async">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Bilal Rehman</h2>
@@ -219,7 +266,8 @@
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
             <img src="assets/img/my-profile-img.jpg" class="img-fluid"
-              alt="Bilal Rehman - Full Stack Developer and Software Engineer based in London, UK" loading="lazy">
+              alt="Bilal Rehman - Full Stack Developer and Software Engineer based in London, UK" loading="lazy"
+              decoding="async">
           </div>
           <div class="col-lg-8 content">
             <h2>Full Stack Developer &amp; Software Engineer</h2>
@@ -454,32 +502,33 @@
             <h3 class="resume-title">Sumary</h3>
 
             <div class="resume-item pb-0">
-              <h4>Bilal Rehman</h4>
-              <p> <em>Full Stack Developer with 3+ years of experience designing and developing user-centered mobile and
-                  web applications. Adept at collaborating with cross-functional teams to deliver high-quality
-                  solutions on time. Skilled in both front-end and back-end technologies, with a strong focus on
-                  creating seamless user experiences and scalable architectures.</em></p>
-              <ul>
-                <li>London, UK</li>
-                <li>+447438139239</li>
-                <li>sardar142bilal@gmail.com</li>
-              </ul>
+              <h4>Bilal Rehman</h3>
+                <p> <em>Full Stack Developer with 3+ years of experience designing and developing user-centered mobile
+                    and
+                    web applications. Adept at collaborating with cross-functional teams to deliver high-quality
+                    solutions on time. Skilled in both front-end and back-end technologies, with a strong focus on
+                    creating seamless user experiences and scalable architectures.</em></p>
+                <ul>
+                  <li>London, UK</li>
+                  <li>+447438139239</li>
+                  <li>sardar142bilal@gmail.com</li>
+                </ul>
             </div><!-- Edn Resume Item -->
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Master in Artificial Intelligence</h4>
-              <h5>2025 - Present</h5>
-              <p><em>University of London, London, UK</em></p>
-              <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
+              <h4>Master in Artificial Intelligence</h3>
+                <h5>2025 - Present</h5>
+                <p><em>University of London, London, UK</em></p>
+                <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui
                 ut dignissimos deleniti nerada porti sand markend</p> -->
             </div><!-- Edn Resume Item -->
 
             <div class="resume-item">
-              <h4>Bachelor in Computer Science</h4>
-              <h5>2019 - 2023</h5>
-              <p><em>National University of Modern Languages, Islamabad, Pakistan</em></p>
-              <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
+              <h4>Bachelor in Computer Science</h3>
+                <h5>2019 - 2023</h5>
+                <p><em>National University of Modern Languages, Islamabad, Pakistan</em></p>
+                <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius
                 unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart
                 dila</p> -->
             </div><!-- Edn Resume Item -->
@@ -489,24 +538,26 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Full Stack Developer</h4>
-              <h5>2024 - 2025</h5>
-              <p><em>AutoLeap, Remote</em></p>
-              <ul>
-                <li>Developed a cloud-based auto repair shop management software, modernising workflows, parts ordering,
-                  and customer communication for over 1,000 auto shops across North America, increasing operational
-                  efficiency by 70%.</li>
-                <li>Delivered a cohesive UI, resulting in a 25% increase in user engagement, by translating Figma
-                  designs into Angular.</li>
-                <li>Integrated the "My Fleet Center" feature in AutoLeap's product, resulting in an 80% increase in
-                  operational efficiency for fleet management processes.</li>
-                <li>Translated the application into French, enhancing accessibility for 90% of French-speaking users and
-                  contributing to a localization effort that increased user engagement by 30%.</li>
-                <li>Collaborated with cross-functional teams to ensure smooth implementation and consistency across
-                  features and languages.</li>
-                <li><strong>Technologies used:</strong> Angular, CSS, SCSS, Bootstrap, NodeJS, ExpressJs, TypeScript,
-                  Rxjs</li>
-              </ul>
+              <h4>Full Stack Developer</h3>
+                <h5>2024 - 2025</h5>
+                <p><em>AutoLeap, Remote</em></p>
+                <ul>
+                  <li>Developed a cloud-based auto repair shop management software, modernising workflows, parts
+                    ordering,
+                    and customer communication for over 1,000 auto shops across North America, increasing operational
+                    efficiency by 70%.</li>
+                  <li>Delivered a cohesive UI, resulting in a 25% increase in user engagement, by translating Figma
+                    designs into Angular.</li>
+                  <li>Integrated the "My Fleet Center" feature in AutoLeap's product, resulting in an 80% increase in
+                    operational efficiency for fleet management processes.</li>
+                  <li>Translated the application into French, enhancing accessibility for 90% of French-speaking users
+                    and
+                    contributing to a localization effort that increased user engagement by 30%.</li>
+                  <li>Collaborated with cross-functional teams to ensure smooth implementation and consistency across
+                    features and languages.</li>
+                  <li><strong>Technologies used:</strong> Angular, CSS, SCSS, Bootstrap, NodeJS, ExpressJs, TypeScript,
+                    Rxjs</li>
+                </ul>
             </div><!-- Edn Resume Item -->
 
 
@@ -514,65 +565,65 @@
 
         </div>
         <div class="resume-item mt-5">
-          <h4>Full Stack Developer</h4>
-          <h5>July 2021 - Dec 2024</h5>
-          <p><em>Qwamo, Remote</em></p>
-          <ul>
-            <li>
-              <strong>UnitedApp</strong>
-              <ul>
-                <li><strong>Role:</strong> Lead developer for both frontend and backend, collaborating closely with
-                  UI/UX designers to ensure a seamless user experience.</li>
-                <li><strong>Key Features:</strong> Task assignment with history tracking, reward-based
-                  responsibility system, real-time data updates, responsive user interface, and task status display.
-                </li>
-                <li><strong>Outcomes:</strong> Improved family engagement and responsibility in children, with
-                  positive feedback from users for its simple and intuitive design.</li>
-                <li><strong>Technologies used:</strong> React.js, React Native, JavaScript, HTML, CSS, Firebase,
-                  Tailwind CSS.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>HomeLyne</strong>
-              <ul>
-                <li><strong>Role:</strong> Developed AR features, integrated social and e-commerce functionalities,
-                  and ensured data security, resulting in a 30% increase in user engagement and a reduction in data
-                  breach incidents by 20%.</li>
-                <li><strong>Key Features:</strong> AR integration for item previews, chat system, e-commerce
-                  functionality, social interactions (likes, shares, follows), and secure transaction support.</li>
-                <li><strong>Outcomes:</strong> Attracted a broad user base due to its unique AR functionality, with
-                  increased user engagement and retention.</li>
-                <li><strong>Technologies used:</strong> React Native, Redux (Toolkit), Firebase, HTML, CSS.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Pubkit</strong>
-              <ul>
-                <li><strong>Role:</strong> Full stack developer overseeing account creation and XP-based engagement
-                  system, campaigns, real time chat system and implementing Firebase for data storage.</li>
-                <li><strong>Key Features:</strong> Developed a gamified XP system featuring dynamic content updates,
-                  managed multiple campaigns, and implemented international accessibility, enhancing user engagement
-                  by 45% across the university society's platform.</li>
-                <li><strong>Outcomes:</strong> Created a loyal user base of publishers, enhancing their engagement
-                  and incentivizing product/service marketing through the XP system.</li>
-                <li><strong>Technologies used:</strong> React Native, Redux, JavaScript, HTML5, CSS, Firebase,
-                  Firestore, Google Auth.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>V4H20</strong>
-              <ul>
-                <li><strong>Role:</strong> Lead developer for frontend design and AI chatbot integration, ensuring
-                  machine learning models effectively respond to user health queries.</li>
-                <li><strong>Key Features:</strong> Personalized health tracking, AI-driven chatbot, real-time
-                  feedback, and secure user data management.</li>
-                <li><strong>Outcomes:</strong> Improved user health awareness, with positive user feedback on
-                  chatbot accuracy and ease of use, resulting in high user retention.</li>
-                <li><strong>Technologies used:</strong> React Native, Redux, AI, Chatbots, HTML5, CSS, Firebase,
-                  Firestore, Google Auth.</li>
-              </ul>
-            </li>
-          </ul>
+          <h4>Full Stack Developer</h3>
+            <h5>July 2021 - Dec 2024</h5>
+            <p><em>Qwamo, Remote</em></p>
+            <ul>
+              <li>
+                <strong>UnitedApp</strong>
+                <ul>
+                  <li><strong>Role:</strong> Lead developer for both frontend and backend, collaborating closely with
+                    UI/UX designers to ensure a seamless user experience.</li>
+                  <li><strong>Key Features:</strong> Task assignment with history tracking, reward-based
+                    responsibility system, real-time data updates, responsive user interface, and task status display.
+                  </li>
+                  <li><strong>Outcomes:</strong> Improved family engagement and responsibility in children, with
+                    positive feedback from users for its simple and intuitive design.</li>
+                  <li><strong>Technologies used:</strong> React.js, React Native, JavaScript, HTML, CSS, Firebase,
+                    Tailwind CSS.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>HomeLyne</strong>
+                <ul>
+                  <li><strong>Role:</strong> Developed AR features, integrated social and e-commerce functionalities,
+                    and ensured data security, resulting in a 30% increase in user engagement and a reduction in data
+                    breach incidents by 20%.</li>
+                  <li><strong>Key Features:</strong> AR integration for item previews, chat system, e-commerce
+                    functionality, social interactions (likes, shares, follows), and secure transaction support.</li>
+                  <li><strong>Outcomes:</strong> Attracted a broad user base due to its unique AR functionality, with
+                    increased user engagement and retention.</li>
+                  <li><strong>Technologies used:</strong> React Native, Redux (Toolkit), Firebase, HTML, CSS.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Pubkit</strong>
+                <ul>
+                  <li><strong>Role:</strong> Full stack developer overseeing account creation and XP-based engagement
+                    system, campaigns, real time chat system and implementing Firebase for data storage.</li>
+                  <li><strong>Key Features:</strong> Developed a gamified XP system featuring dynamic content updates,
+                    managed multiple campaigns, and implemented international accessibility, enhancing user engagement
+                    by 45% across the university society's platform.</li>
+                  <li><strong>Outcomes:</strong> Created a loyal user base of publishers, enhancing their engagement
+                    and incentivizing product/service marketing through the XP system.</li>
+                  <li><strong>Technologies used:</strong> React Native, Redux, JavaScript, HTML5, CSS, Firebase,
+                    Firestore, Google Auth.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>V4H20</strong>
+                <ul>
+                  <li><strong>Role:</strong> Lead developer for frontend design and AI chatbot integration, ensuring
+                    machine learning models effectively respond to user health queries.</li>
+                  <li><strong>Key Features:</strong> Personalized health tracking, AI-driven chatbot, real-time
+                    feedback, and secure user data management.</li>
+                  <li><strong>Outcomes:</strong> Improved user health awareness, with positive user feedback on
+                    chatbot accuracy and ease of use, resulting in high user retention.</li>
+                  <li><strong>Technologies used:</strong> React Native, Redux, AI, Chatbots, HTML5, CSS, Firebase,
+                    Firestore, Google Auth.</li>
+                </ul>
+              </li>
+            </ul>
         </div><!-- Edn Resume Item -->
 
       </div>
@@ -606,14 +657,15 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/app-1.png" class="img-fluid" alt="" loading="lazy" decoding="async">
                 <div class="portfolio-info">
-                  <h4>HomeLyne</h4>
+                  <h3>HomeLyne</h3>
                   <p>Social and e-commerce app with AR</p>
                   <a href="assets/img/portfolio/app-1.png" title="HomeLyne" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=homelyne" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    class="glightbox preview-link" aria-label="View HomeLyne project image"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=homelyne" title="More Details" class="details-link"
+                    aria-label="View HomeLyne project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>
@@ -622,13 +674,16 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/pubkit-main.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/pubkit-main.png" class="img-fluid" alt="" loading="lazy"
+                  decoding="async">
                 <div class="portfolio-info">
-                  <h4>Pubkit</h4>
+                  <h3>Pubkit</h3>
                   <p>Pubkit lets users earn by running campaigns and leveling up.</p>
                   <a href="assets/img/portfolio/pubkit-main.png" title="Pubkit" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=pubkit" title="More Details" class="details-link"><i
+                    class="glightbox preview-link" aria-label="View Pubkit project image"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=pubkit" title="More Details" class="details-link"
+                    aria-label="View project details" aria-label="View Pubkit project details"><i
                       class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -636,99 +691,103 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/BChain.jpg" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/BChain.jpg" class="img-fluid" alt="" loading="lazy" decoding="async">
                 <div class="portfolio-info">
-                  <h4>Stamp Automation System
-                    ( BLOCKCHAIN )</h4>
+                  <h3>Stamp Automation System
+                    ( BLOCKCHAIN )</h3>
                   <p>A blockchain-based system for automating stamp collection and management.</p>
                   <a href="assets/img/portfolio/BChain.jpg" title="Product 1" data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=blockchain" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    class="glightbox preview-link" aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=blockchain" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/united-1.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/united-1.png" class="img-fluid" alt="" loading="lazy" decoding="async">
                 <div class="portfolio-info">
-                  <h4>UnitedApp</h4>
+                  <h3>UnitedApp</h3>
                   <p>Family task management app.</p>
                   <a href="assets/img/portfolio/united-1.png" title="UnitedApp" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=unitedapp" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    class="glightbox preview-link" aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=unitedapp" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/omigahealth-1.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/omigahealth-1.png" class="img-fluid" alt="" loading="lazy"
+                  decoding="async">
                 <div class="portfolio-info">
-                  <h4>Omiga Health</h4>
+                  <h3>Omiga Health</h3>
                   <p>A health monitoring app with real-time data analysis and personalized recommendations.</p>
                   <a href="assets/img/portfolio/omigahealth-1.png" title="Omiga Health"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=omigahealth" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"
+                    aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=omigahealth" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/v4h2o-main.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/v4h2o-main.png" class="img-fluid" alt="" loading="lazy" decoding="async">
                 <div class="portfolio-info">
-                  <h4>V4H20</h4>
+                  <h3>V4H20</h3>
                   <p>A health monitoring app with AI chatbot integration.</p>
                   <a href="assets/img/portfolio/v4h2o-main.png" title="V4H20" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=v4h20" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    class="glightbox preview-link" aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=v4h20" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/voice-cloning-1.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/voice-cloning-1.png" class="img-fluid" alt="" loading="lazy"
+                  decoding="async">
                 <div class="portfolio-info">
-                  <h4>Voice Cloning</h4>
+                  <h3>Voice Cloning</h3>
                   <p>This app lets you clone a voice from an audio sample, then generate new speech in that voice from
                     any text you provide.</p>
                   <a href="assets/img/portfolio/voice-cloning-1.png" title="Voice Cloning"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=voice-cloning" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"
+                    aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=voice-cloning" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/LiveTrackingDevice.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/LiveTrackingDevice.png" class="img-fluid" alt="" loading="lazy"
+                  decoding="async">
                 <div class="portfolio-info">
-                  <h4>Live Tracking System</h4>
+                  <h3>Live Tracking System</h3>
                   <p>A live tracking system for vehicles and assets.</p>
                   <a href="assets/img/portfolio/LiveTrackingDevice.png" title="Omiga Health"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=livetracking" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"
+                    aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=livetracking" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/1-2-1-AI-Coach.png" class="img-fluid" alt="" loading="lazy">
+                <img src="assets/img/portfolio/1-2-1-AI-Coach.png" class="img-fluid" alt="" loading="lazy"
+                  decoding="async">
                 <div class="portfolio-info">
-                  <h4>1-1 AI Coach</h4>
+                  <h3>1-1 AI Coach</h3>
                   <p>A personalized AI coach for individuals seeking personalized guidance and support.</p>
                   <a href="assets/img/portfolio/1-2-1-AI-Coach.png" title="1-1 AI Coach"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html?id=ai-coach" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"
+                    aria-label="View project image"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html?id=ai-coach" title="More Details" class="details-link"
+                    aria-label="View project details"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -761,9 +820,9 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-laptop"></i></div>
             <div>
-              <h4 class="title">Web Development</h4>
-              <p class="description">Custom, responsive, and scalable websites and web applications tailored to your
-                business needs using the latest technologies and best practices.</p>
+              <h4 class="title">Web Development</h3>
+                <p class="description">Custom, responsive, and scalable websites and web applications tailored to your
+                  business needs using the latest technologies and best practices.</p>
             </div>
           </div>
           <!-- End Service Item -->
@@ -772,9 +831,9 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="bi bi-phone"></i></div>
             <div>
-              <h4 class="title">Mobile Application Development</h4>
-              <p class="description">Cross-platform mobile apps for iOS and Android, delivering seamless user
-                experiences and robust performance for your customers on the go.</p>
+              <h4 class="title">Mobile Application Development</h3>
+                <p class="description">Cross-platform mobile apps for iOS and Android, delivering seamless user
+                  experiences and robust performance for your customers on the go.</p>
             </div>
           </div>
           <!-- End Service Item -->
@@ -783,9 +842,9 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="icon flex-shrink-0"><i class="bi bi-gear"></i></div>
             <div>
-              <h4 class="title">Automation</h4>
-              <p class="description">Streamline your business processes with custom automation solutions, saving time
-                and reducing manual effort through intelligent workflows and integrations.</p>
+              <h4 class="title">Automation</h3>
+                <p class="description">Streamline your business processes with custom automation solutions, saving time
+                  and reducing manual effort through intelligent workflows and integrations.</p>
             </div>
           </div>
           <!-- End Service Item -->
@@ -794,9 +853,10 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="icon flex-shrink-0"><i class="bi bi-robot"></i></div>
             <div>
-              <h4 class="title">AI Agents</h4>
-              <p class="description">Develop and deploy intelligent AI agents and chatbots to automate customer support,
-                enhance user engagement, and provide smart business insights.</p>
+              <h4 class="title">AI Agents</h3>
+                <p class="description">Develop and deploy intelligent AI agents and chatbots to automate customer
+                  support,
+                  enhance user engagement, and provide smart business insights.</p>
             </div>
           </div>
           <!-- End Service Item -->
@@ -805,9 +865,9 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
             <div class="icon flex-shrink-0"><i class="bi bi-megaphone"></i></div>
             <div>
-              <h4 class="title">Social Media Marketing</h4>
-              <p class="description">Grow your brand and reach your target audience with effective social media
-                strategies, content creation, and campaign management across all major platforms.</p>
+              <h4 class="title">Social Media Marketing</h3>
+                <p class="description">Grow your brand and reach your target audience with effective social media
+                  strategies, content creation, and campaign management across all major platforms.</p>
             </div>
           </div>
           <!-- End Service Item -->
@@ -869,7 +929,7 @@
                 </p>
                 <img src="assets/img/testimonials/chitrit.jpg" class="testimonial-img" alt="Romi Chitrit">
                 <h3>Romi Chitrit</h3>
-                <h4>Qwamo Apps</h4>
+                <h4>Qwamo Apps</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -885,7 +945,7 @@
                 <!-- No profile image provided -->
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="Gadi bin Lavi">
                 <h3>Gadi bin Lavi</h3>
-                <h4>The United Family App</h4>
+                <h4>The United Family App</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -900,7 +960,7 @@
                 </p>
                 <img src="assets/img/testimonials/vince.jpg" class="testimonial-img" alt="Vince Roche">
                 <h3>Vince Roche</h3>
-                <h4>Unit Testing</h4>
+                <h4>Unit Testing</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -915,7 +975,7 @@
                 </p>
                 <img src="assets/img/testimonials/yousaf.jpg" class="testimonial-img" alt="Yousaf Zimam">
                 <h3>Yousaf Zimam</h3>
-                <h4>A web app with Angular JS</h4>
+                <h4>A web app with Angular JS</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -930,7 +990,7 @@
                 </p>
                 <img src="assets/img/testimonials/kristein.webp" class="testimonial-img" alt="Kristein Callahan">
                 <h3>Kristein Callahan</h3>
-                <h4>Metabolic Healing</h4>
+                <h4>Metabolic Healing</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -945,7 +1005,7 @@
                 </p>
                 <img src="assets/img/testimonials/hamza.jpg" class="testimonial-img" alt="Meer Hamza">
                 <h3>Meer Hamza</h3>
-                <h4>Web App with Bootstrap 3 Integration</h4>
+                <h4>Web App with Bootstrap 3 Integration</h3>
               </div>
             </div><!-- End testimonial item -->
             <div class="swiper-pagination"></div>
@@ -998,7 +1058,7 @@
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.282964479836!2d0.0702783157599646!3d51.55841127964613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a6e2e2e2e2e3%3A0x2e2e2e2e2e2e2e2e!2sIlford%2C%20London%2C%20UK!5e0!3m2!1sen!2suk!4v1717690000000!5m2!1sen!2suk"
                 frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                decoding="async" referrerpolicy="no-referrer-when-downgrade"
                 title="Google Maps showing Bilal Rehman's location in London, UK"></iframe>
             </div>
           </div>
@@ -1012,7 +1072,7 @@
                 <div class="contact-option">
                   <i class="bi bi-envelope-fill"></i>
                   <div>
-                    <h4>Email Me Directly</h4>
+                    <h3>Email Me Directly</h3>
                     <p>Click the button below to send me an email through Gmail</p>
                     <a href="mailto:sardar142bilal@gmail.com?subject=Portfolio Inquiry" class="btn btn-primary">
                       <i class="bi bi-envelope"></i> Send Me Email
@@ -1023,7 +1083,7 @@
                 <div class="contact-option">
                   <i class="bi bi-telephone-fill"></i>
                   <div>
-                    <h4>Call Me</h4>
+                    <h3>Call Me</h3>
                     <p>Feel free to call me directly</p>
                     <a href="tel:+447438139239" class="btn btn-outline-primary">
                       <i class="bi bi-telephone"></i> +44 7438 139239
@@ -1034,7 +1094,7 @@
                 <div class="contact-option">
                   <i class="bi bi-linkedin"></i>
                   <div>
-                    <h4>Connect on LinkedIn</h4>
+                    <h3>Connect on LinkedIn</h3>
                     <p>Let's connect professionally</p>
                     <a href="https://www.linkedin.com/in/bilal142/" target="_blank" class="btn btn-outline-primary">
                       <i class="bi bi-linkedin"></i> Connect on LinkedIn
@@ -1173,25 +1233,25 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="blog/index.html">Blog</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+            <h4>Quick Links</h3>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="footer-links">
-            <h4>Portfolio</h4>
-            <ul>
-              <li><a href="portfolio-details.html?id=homelyne">HomeLyne</a></li>
-              <li><a href="portfolio-details.html?id=pubkit">Pubkit</a></li>
-              <li><a href="portfolio-details.html?id=unitedapp">UnitedApp</a></li>
-              <li><a href="portfolio-details.html?id=omigahealth">Omiga Health</a></li>
-            </ul>
+            <h4>Portfolio</h3>
+              <ul>
+                <li><a href="portfolio-details.html?id=homelyne">HomeLyne</a></li>
+                <li><a href="portfolio-details.html?id=pubkit">Pubkit</a></li>
+                <li><a href="portfolio-details.html?id=unitedapp">UnitedApp</a></li>
+                <li><a href="portfolio-details.html?id=omigahealth">Omiga Health</a></li>
+              </ul>
           </div>
         </div>
       </div>
@@ -1210,19 +1270,19 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
 </body>
 
