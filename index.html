@@ -46,16 +46,13 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Preload critical resources -->
-  <link rel="preload" href="assets/img/hero-bg.jpg" as="image" media="(min-width: 768px)">
-  <link rel="preload" href="assets/img/my-profile-img.jpg" as="image" media="(min-width: 768px)">
+  <link rel="preload" href="assets/img/hero-bg.jpg" as="image">
+  <link rel="preload" href="assets/img/my-profile-img.jpg" as="image">
 
   <!-- Resource Hints -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="dns-prefetch" href="//www.googletagmanager.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://www.googletagmanager.com">
   <!-- Preload critical fonts -->
   <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@400;600&display=swap"
@@ -65,59 +62,37 @@
       rel="stylesheet">
   </noscript>
 
-  <!-- Critical CSS -->
-  <style>
-    /* Critical above-the-fold styles */
-    body {
-      font-family: "Roboto", sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .hero {
-      background: linear-gradient(45deg, rgba(5, 99, 187, 0.8), rgba(0, 0, 0, 0.8));
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero h2 {
-      color: white;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      color: white;
-      font-size: 1.2rem;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #0563bb;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print"
-    onload="this.media='all'">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Desktop-specific optimizations -->
+  <style>
+    /* Desktop-only performance improvements */
+    @media (min-width: 768px) {
+
+      /* Optimize desktop font rendering */
+      body {
+        font-display: swap;
+        text-rendering: optimizeSpeed;
+      }
+
+      /* Desktop image optimization */
+      img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+
+      /* Desktop layout optimization */
+      .container {
+        contain: layout style;
+      }
+    }
+  </style>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -1270,19 +1245,39 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/php-email-form/validate.js" defer></script>
-  <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Desktop-specific JavaScript optimizations -->
+  <script>
+    // Desktop-only performance optimizations
+    if (window.innerWidth >= 768) {
+      // Desktop: Load non-critical scripts after page load
+      window.addEventListener('load', function () {
+        // Desktop-specific optimizations
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(function () {
+            // Desktop: Preload next page resources
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = 'blog/index.html';
+            document.head.appendChild(link);
+          });
+        }
+      });
+    }
+  </script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
