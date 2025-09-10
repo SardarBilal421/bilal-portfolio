@@ -86,7 +86,7 @@
 
   <!-- Blog Pages -->
   <url>
-    <loc>https://bilalrehman.me/blog/</loc>
+    <loc>https://bilalrehman.me/blog/index.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

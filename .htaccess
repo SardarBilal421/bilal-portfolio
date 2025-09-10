@@ -1,3 +1,6 @@
+# Handle blog directory redirect
+RewriteRule ^blog/?$ /blog/index.html [R=301,L]
+
 # Redirect HTTP to HTTPS
 RewriteEngine On
 RewriteCond %{HTTPS} off
