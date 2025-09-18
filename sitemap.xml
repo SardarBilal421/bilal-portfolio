@@ -14,63 +14,63 @@
 
   <!-- Portfolio Details Pages -->
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=homelyne</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=homelyne</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=pubkit</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=pubkit</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=unitedapp</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=unitedapp</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=v4h20</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=v4h20</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=blockchain</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=blockchain</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=omigahealth</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=omigahealth</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=livetracking</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=livetracking</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=voice-cloning</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=voice-cloning</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/portfolio-details.html?id=ai-coach</loc>
+    <loc>https://bilalrehman.me/portfolio-details?id=ai-coach</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -78,7 +78,7 @@
 
   <!-- Service Details -->
   <url>
-    <loc>https://bilalrehman.me/service-details.html</loc>
+    <loc>https://bilalrehman.me/service-details</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -86,14 +86,14 @@
 
   <!-- Blog Pages -->
   <url>
-    <loc>https://bilalrehman.me/blog/index.html</loc>
+    <loc>https://bilalrehman.me/blog</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bilalrehman.me/blog/react-js-development-guide.html</loc>
+    <loc>https://bilalrehman.me/blog/react-js-development-guide</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
