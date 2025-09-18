@@ -76,14 +76,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Service Details -->
-  <url>
-    <loc>https://bilalrehman.me/service-details</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Blog Pages -->
   <url>
     <loc>https://bilalrehman.me/blog</loc>
